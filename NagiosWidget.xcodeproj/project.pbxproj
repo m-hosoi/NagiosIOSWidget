@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09962E1E25EA6AF200FA752B /* NagiosWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09962E1D25EA6AF200FA752B /* NagiosWidgetApp.swift */; };
+		09962E2025EA6AF200FA752B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09962E1F25EA6AF200FA752B /* ContentView.swift */; };
+		09962E2225EA6AF400FA752B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09962E2125EA6AF400FA752B /* Assets.xcassets */; };
+		09962E2525EA6AF400FA752B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09962E2425EA6AF400FA752B /* Preview Assets.xcassets */; };
+		09962E2E25EA6BD000FA752B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09962E2D25EA6BD000FA752B /* SettingView.swift */; };
+		09962E3B25EA76E400FA752B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09962E3A25EA76E400FA752B /* WidgetKit.framework */; };
+		09962E3D25EA76E400FA752B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09962E3C25EA76E400FA752B /* SwiftUI.framework */; };
+		09962E4025EA76E400FA752B /* Nagios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09962E3F25EA76E400FA752B /* Nagios.swift */; };
+		09962E4325EA76E600FA752B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09962E4225EA76E600FA752B /* Assets.xcassets */; };
+		09962E4525EA76E600FA752B /* Nagios.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09962E4125EA76E400FA752B /* Nagios.intentdefinition */; };
+		09962E4625EA76E600FA752B /* Nagios.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 09962E4125EA76E400FA752B /* Nagios.intentdefinition */; };
+		09962E4925EA76E600FA752B /* NagiosExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09962E3825EA76E400FA752B /* NagiosExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		09962E5525EB585B00FA752B /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 09962E5425EB585B00FA752B /* SwiftSoup */; };
+		09962E5925EB58C600FA752B /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 09962E5825EB58C600FA752B /* SwiftSoup */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09962E4725EA76E600FA752B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09962E1225EA6AF200FA752B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09962E3725EA76E400FA752B;
+			remoteInfo = NagiosExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09962E4D25EA76E600FA752B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				09962E4925EA76E600FA752B /* NagiosExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		09962E1A25EA6AF200FA752B /* NagiosWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NagiosWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09962E1D25EA6AF200FA752B /* NagiosWidgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NagiosWidgetApp.swift; sourceTree = "<group>"; };
+		09962E1F25EA6AF200FA752B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		09962E2125EA6AF400FA752B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09962E2425EA6AF400FA752B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09962E2625EA6AF400FA752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09962E2D25EA6BD000FA752B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		09962E3025EA71D500FA752B /* NagiosWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NagiosWidget.entitlements; sourceTree = "<group>"; };
+		09962E3825EA76E400FA752B /* NagiosExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NagiosExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		09962E3A25EA76E400FA752B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		09962E3C25EA76E400FA752B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		09962E3F25EA76E400FA752B /* Nagios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nagios.swift; sourceTree = "<group>"; };
+		09962E4125EA76E400FA752B /* Nagios.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Nagios.intentdefinition; sourceTree = "<group>"; };
+		09962E4225EA76E600FA752B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09962E4425EA76E600FA752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09962E5025EA76F600FA752B /* NagiosExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NagiosExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09962E1725EA6AF200FA752B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09962E5525EB585B00FA752B /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09962E3525EA76E400FA752B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09962E3D25EA76E400FA752B /* SwiftUI.framework in Frameworks */,
+				09962E3B25EA76E400FA752B /* WidgetKit.framework in Frameworks */,
+				09962E5925EB58C600FA752B /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09962E1125EA6AF200FA752B = {
+			isa = PBXGroup;
+			children = (
+				09962E5025EA76F600FA752B /* NagiosExtension.entitlements */,
+				09962E1C25EA6AF200FA752B /* NagiosWidget */,
+				09962E3E25EA76E400FA752B /* Nagios */,
+				09962E3925EA76E400FA752B /* Frameworks */,
+				09962E1B25EA6AF200FA752B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09962E1B25EA6AF200FA752B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09962E1A25EA6AF200FA752B /* NagiosWidget.app */,
+				09962E3825EA76E400FA752B /* NagiosExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09962E1C25EA6AF200FA752B /* NagiosWidget */ = {
+			isa = PBXGroup;
+			children = (
+				09962E3025EA71D500FA752B /* NagiosWidget.entitlements */,
+				09962E1D25EA6AF200FA752B /* NagiosWidgetApp.swift */,
+				09962E1F25EA6AF200FA752B /* ContentView.swift */,
+				09962E2125EA6AF400FA752B /* Assets.xcassets */,
+				09962E2625EA6AF400FA752B /* Info.plist */,
+				09962E2325EA6AF400FA752B /* Preview Content */,
+				09962E2D25EA6BD000FA752B /* SettingView.swift */,
+			);
+			path = NagiosWidget;
+			sourceTree = "<group>";
+		};
+		09962E2325EA6AF400FA752B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				09962E2425EA6AF400FA752B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09962E3925EA76E400FA752B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09962E3A25EA76E400FA752B /* WidgetKit.framework */,
+				09962E3C25EA76E400FA752B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09962E3E25EA76E400FA752B /* Nagios */ = {
+			isa = PBXGroup;
+			children = (
+				09962E3F25EA76E400FA752B /* Nagios.swift */,
+				09962E4125EA76E400FA752B /* Nagios.intentdefinition */,
+				09962E4225EA76E600FA752B /* Assets.xcassets */,
+				09962E4425EA76E600FA752B /* Info.plist */,
+			);
+			path = Nagios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09962E1925EA6AF200FA752B /* NagiosWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09962E2925EA6AF400FA752B /* Build configuration list for PBXNativeTarget "NagiosWidget" */;
+			buildPhases = (
+				09962E1625EA6AF200FA752B /* Sources */,
+				09962E1725EA6AF200FA752B /* Frameworks */,
+				09962E1825EA6AF200FA752B /* Resources */,
+				09962E4D25EA76E600FA752B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09962E4825EA76E600FA752B /* PBXTargetDependency */,
+			);
+			name = NagiosWidget;
+			packageProductDependencies = (
+				09962E5425EB585B00FA752B /* SwiftSoup */,
+			);
+			productName = NagiosWidget;
+			productReference = 09962E1A25EA6AF200FA752B /* NagiosWidget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09962E3725EA76E400FA752B /* NagiosExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09962E4A25EA76E600FA752B /* Build configuration list for PBXNativeTarget "NagiosExtension" */;
+			buildPhases = (
+				09962E3425EA76E400FA752B /* Sources */,
+				09962E3525EA76E400FA752B /* Frameworks */,
+				09962E3625EA76E400FA752B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NagiosExtension;
+			packageProductDependencies = (
+				09962E5825EB58C600FA752B /* SwiftSoup */,
+			);
+			productName = NagiosExtension;
+			productReference = 09962E3825EA76E400FA752B /* NagiosExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09962E1225EA6AF200FA752B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					09962E1925EA6AF200FA752B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					09962E3725EA76E400FA752B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 09962E1525EA6AF200FA752B /* Build configuration list for PBXProject "NagiosWidget" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 09962E1125EA6AF200FA752B;
+			packageReferences = (
+				09962E5325EB585B00FA752B /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
+			productRefGroup = 09962E1B25EA6AF200FA752B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09962E1925EA6AF200FA752B /* NagiosWidget */,
+				09962E3725EA76E400FA752B /* NagiosExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09962E1825EA6AF200FA752B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09962E2525EA6AF400FA752B /* Preview Assets.xcassets in Resources */,
+				09962E2225EA6AF400FA752B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09962E3625EA76E400FA752B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09962E4325EA76E600FA752B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09962E1625EA6AF200FA752B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09962E2E25EA6BD000FA752B /* SettingView.swift in Sources */,
+				09962E4625EA76E600FA752B /* Nagios.intentdefinition in Sources */,
+				09962E2025EA6AF200FA752B /* ContentView.swift in Sources */,
+				09962E1E25EA6AF200FA752B /* NagiosWidgetApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09962E3425EA76E400FA752B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09962E4025EA76E400FA752B /* Nagios.swift in Sources */,
+				09962E4525EA76E600FA752B /* Nagios.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09962E4825EA76E600FA752B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09962E3725EA76E400FA752B /* NagiosExtension */;
+			targetProxy = 09962E4725EA76E600FA752B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09962E2725EA6AF400FA752B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09962E2825EA6AF400FA752B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09962E2A25EA6AF400FA752B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NagiosWidget/NagiosWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NagiosWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = 356J44MV3F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NagiosWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.m-hosoi.NagiosWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09962E2B25EA6AF400FA752B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NagiosWidget/NagiosWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"NagiosWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = 356J44MV3F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NagiosWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.m-hosoi.NagiosWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		09962E4B25EA76E600FA752B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NagiosExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356J44MV3F;
+				INFOPLIST_FILE = Nagios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.m-hosoi.NagiosWidget.Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09962E4C25EA76E600FA752B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = NagiosExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 356J44MV3F;
+				INFOPLIST_FILE = Nagios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.m-hosoi.NagiosWidget.Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09962E1525EA6AF200FA752B /* Build configuration list for PBXProject "NagiosWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09962E2725EA6AF400FA752B /* Debug */,
+				09962E2825EA6AF400FA752B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09962E2925EA6AF400FA752B /* Build configuration list for PBXNativeTarget "NagiosWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09962E2A25EA6AF400FA752B /* Debug */,
+				09962E2B25EA6AF400FA752B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09962E4A25EA76E600FA752B /* Build configuration list for PBXNativeTarget "NagiosExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09962E4B25EA76E600FA752B /* Debug */,
+				09962E4C25EA76E600FA752B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		09962E5325EB585B00FA752B /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09962E5425EB585B00FA752B /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09962E5325EB585B00FA752B /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		09962E5825EB58C600FA752B /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09962E5325EB585B00FA752B /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 09962E1225EA6AF200FA752B /* Project object */;
+}
