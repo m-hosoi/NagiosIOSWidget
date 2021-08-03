@@ -145,7 +145,6 @@ func _fetchData(settings:[SettingData], index:Int, dataRows:[[String]], onSucces
     guard let url = URL(string: setting.URL.hasSuffix("/")
                             ? "\(setting.URL)cgi-bin/status.cgi"
                             : "\(setting.URL)/cgi-bin/status.cgi") else { return }
-    print(url)
     var req = URLRequest(url: url)
     req.httpMethod = "GET"
     guard let credentialData = "\(setting.UserName):\(setting.Password)".data(using: String.Encoding.utf8) else { return }
@@ -153,7 +152,32 @@ func _fetchData(settings:[SettingData], index:Int, dataRows:[[String]], onSucces
     let basicData = "Basic \(credential)"
     req.setValue(basicData, forHTTPHeaderField: "Authorization")
     
-    URLSession.shared.dataTask(with: req) { (data, _, error) in
+    URLSession.shared.dataTask(with: req) { (data, resp, error) in
+        if let resp = resp as? HTTPURLResponse {
+            if resp.statusCode >= 400 {
+                print("Error: \(resp.statusCode) \(url)")
+                let res = { () ->[[String]] in
+                    if resp.statusCode == 401 {
+                        return [
+                            [setting.URL, "", "", "", "", "", ""],
+                            ["", "Connection", "WARNING", "", "", "", "Unauthorized"]
+                        ]
+                    }
+                    if resp.statusCode >= 500 {
+                        return [
+                            [setting.URL, "", "", "", "", "", ""],
+                            ["", "Connection", "WARNING", "", "", "", "Server Error"]
+                        ]
+                    }
+                    return [
+                        [setting.URL, "", "", "", "", "", ""],
+                        ["", "Connection", "WARNING", "", "", "", "Error \(resp.statusCode)"]
+                    ]
+                }()
+                _fetchData(settings: settings, index: index + 1, dataRows: dataRows + res, onSuccess: onSuccess)
+                return
+            }
+        }
         guard let data = data else { return }
         guard let doc = try? SwiftSoup.parse(String(data: data, encoding: .utf8)!) else {
             print("parse error")
